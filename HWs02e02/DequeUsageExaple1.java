@@ -4,10 +4,11 @@ package javaapplication1;
 
 public class DequeUsageExaple1 {
            public static void main(String [] args){
-                   Deque1 d1=new Deque1();
+        	   Deque1<Integer> d1 =  new Deque1<Integer>();
+                  
                     try{    
-     
-    d1.popBack();
+ 
+    d1.popFront();
 
 }     
          catch (DequeOutOfBoundsException1 e){

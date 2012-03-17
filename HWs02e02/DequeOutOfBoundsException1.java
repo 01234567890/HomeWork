@@ -11,8 +11,6 @@ package javaapplication1;
         return "DequeOutOfBoundsException !!![ "+e+" ]";
     }
    
-    public void DequeOutOfBoundsException1(){
-        System.err.println("DequeOutOfBoundsException !!!");
-    }   
+     
 }
 

@@ -1,16 +1,23 @@
 package javaapplication1;
-public class Deque1 {
+public class Deque1<T> {
     int[] k;
-
+    private T t;
     Deque1() {
         k = new int[0];
     }
-    void pushBack(int a) {
+    public void add(T t) {
+        this.t = t;
+    }
+
+    public T get() {
+        return t;
+    }
+    void pushBack(T a) {
         int[] k1 = new int[k.length + 1];
         for (int i = 0; i < k.length; i++) {
             k1[i] = k[i];
         }
-        k1[k.length] = a;
+        k1[k.length] = (Integer) a;
         k = k1;
     }
     int popBack() throws DequeOutOfBoundsException1 {
@@ -18,9 +25,7 @@ public class Deque1 {
             throw new DequeOutOfBoundsException1(k.length);
         }
         int[] k1 = new int[k.length - 1];
-        if (k1.length <= 0) {
-            throw new DequeOutOfBoundsException1(k1.length);
-        }
+       
         int y = k[k.length - 1];
         for (int i = 0; i < k.length - 1; i++) {
             k1[i] = k[i];
@@ -29,12 +34,12 @@ public class Deque1 {
         return y;
     }
 
-    void pushFront(int a1) {
+    void pushFront(T a1) {
         int[] k1 = new int[k.length + 1];
         for (int i = 0; i < k.length; i++) {
             k1[i + 1] = k[i];
         }
-        k1[0] = a1;
+        k1[0] = (Integer) a1;
         k = k1;
     }
 
